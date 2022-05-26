@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import Header from "./components/Header";
+import Menu from "./components/Menu";
+import "./css/App-dark.css";
+import "./css/App-light.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+const App = () => {
+    const [theme, setTheme] = useState("light");
+
+    console.log(`theme`, theme);
+    const changeTheme = () => {
+        if(theme === "light"){
+            console.log(`should change to dark` );
+            setTheme("dark")
+        }else   {
+            console.log("should change to light");
+            setTheme("light")
+        } 
+    }
+
+    return (
+        <div className= {theme === "dark"? "ui container dark" : "ui container light"}>
+            <Header theme={theme} setTheme={changeTheme} />
+            <Menu theme={theme}/>
+        </div>
+    )
 }
 
-export default App;
+export default App

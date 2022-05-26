@@ -1,0 +1,29 @@
+    .dark{
+        background-color:  #181818;
+    }
+    /* .title-dark{
+        color: beige !important;
+    } */
+    .render-position-name-dark-theme{
+        color: white !important;
+    }
+    /* doesntwork */
+    /* .theme-label-dark{
+        color: white !important;
+    } */
+    .render-position-description-dark-theme{
+        color: white;
+    }
+    .render-position-price-dark-theme{
+        color: white;
+    }
+    .render-position-amount-dark-theme{
+        color: white !important;
+        
+    }
+    /* body{
+        background-color: #161313;
+    }
+     */
+
+
